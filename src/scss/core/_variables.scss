@@ -11,3 +11,21 @@ $fontMain: "Open Sans", sans-serif;
 $fontCard: "Montserrat", sans-serif;
 
 /*MIXINS LABELS AND PLACHOLDERS*/
+
+@mixin label() {
+    width:281px;
+    height:18px;
+    font-family: $fontMain;
+    font-size: 14px;
+    line-height: 1.43;
+    color:$colorLegend;
+    margin:18px 0 7px 0;
+}
+
+@mixin input() {
+   width:281px;
+   height:30px;
+   border:solid 1px 
+   #a2deaf; 
+   padding:0 3px;
+}
