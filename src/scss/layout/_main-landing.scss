@@ -1,0 +1,63 @@
+.main {
+  width: 100vw;
+  background-color: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.logo {
+  width: 250px;
+  height: 63px;
+  margin: 95px 35px 35.4px 35px;
+}
+.h1 {
+  color: $colorMain;
+  font-size: 19.2px;
+  padding: 0px;
+}
+
+.description {
+  color: $colorLegend;
+  font-family: $fontMain;
+  font-size: 12.8px;
+  margin: 0px 28px 17.8px 27.2px;
+  flex-wrap: wrap;
+}
+
+.indexList {
+  color: $colorText;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: $fontMain;
+  font-size: 12.8px;
+  border: solid 1.6px $colorMain;
+  margin: 0px 26.4px 38.6px 25.6px;
+  padding: 15px 20px 10px 20px;
+}
+.indexIcon {
+  font-size: 22.4px;
+  color: $colorMain;
+}
+.listItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-right: 24px;
+  &.share {
+    padding-right: 0px;
+  }
+}
+
+.startButton {
+  border: none;
+  width: 129px;
+  height: 42px;
+  background-color: #438792;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-size: 16px;
+  border-radius: 21px;
+  margin: 0px 101px 30px 90px;
+}
