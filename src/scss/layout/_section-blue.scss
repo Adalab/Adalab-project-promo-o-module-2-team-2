@@ -1,0 +1,69 @@
+.blueSection {
+  width: 100vw;
+  height: 457px;
+  background: linear-gradient(to bottom, #bfcdd0, #dde9ed);
+  padding-top: 38px;
+  padding-bottom: 40px;
+
+  &__reset {
+    width: 75px;
+    height: 30px;
+    border: 1px solid white;
+    border-radius: 15px;
+    background-color: #bfcdd000;
+    color: $colorText;
+    font-family: $fontMain;
+    font-size: 12px;
+    line-height: 1.67;
+    text-transform: uppercase;
+  }
+  &__article {
+    width: 240px;
+    height: 329px;
+    padding: 21px 0 12px;
+    border-radius: 2px;
+    box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.2), 0 1px 3px 0 rgba(0, 0, 0, 0.35);
+    background-color: white;
+    margin-top: 20px;
+    &--title {
+      margin: 0 14px 4px 15px;
+      font-family: $fontCard;
+      font-size: 18px;
+      font-weight: bold;
+      line-height: 1.11;
+      text-transform: capitalize;
+      color: #114e4e;
+    }
+    &--subtitle {
+      margin: 4px 52px 10px 15px;
+      font-family: $fontCard;
+      font-size: 16px;
+      line-height: 1.25;
+      color: $colorText;
+      width: 100%;
+    }
+    &--photo {
+      width: 240px;
+      height: 200px;
+      background-image: url(../images/user_image.jpg);
+      background-size: cover;
+      background-position: center center;
+    }
+    &--containerList {
+      width: 100%;
+      height: 54px;
+      padding: 10px 57px 12px 20px;
+      display: flex;
+      & .item {
+        width: 32px;
+        height: 32px;
+        border: 2px solid #a2deaf;
+        border-radius: 16px;
+        margin-left: 5px;
+        margin-right: 5px;
+        text-align: center;
+        line-height: 30px;
+      }
+    }
+  }
+}
