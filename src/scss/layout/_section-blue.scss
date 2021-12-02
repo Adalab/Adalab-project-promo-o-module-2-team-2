@@ -16,7 +16,12 @@
     font-size: 12px;
     line-height: 1.67;
     text-transform: uppercase;
+    &--icon {
+      color: $colorText;
+      margin-right: 8px;
+    }
   }
+
   &__article {
     width: 240px;
     height: 329px;
@@ -63,6 +68,11 @@
         margin-right: 5px;
         text-align: center;
         line-height: 30px;
+        &a {
+          .icon {
+            color: red;
+          }
+        }
       }
     }
   }
