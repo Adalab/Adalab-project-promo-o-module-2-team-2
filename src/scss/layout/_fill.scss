@@ -1,8 +1,69 @@
+
 .Fill{
     display:flex;
-    width:100%;
+    justify-content:center;
+    border:none;
     &__anunc{
         display:flex;
         width:100%;
+        &--icon{
+            width:21px;
+            height:18px;
+            margin: 13px 10px 28px 0;
+            font-size: 18px;
+            color:$colorMain;
+            line-height: 1.10;
+            text-align: end;
+        }
+        &--h2{
+            width:78px;
+            height:25px;
+            font-family:$fontMain;
+            font-size:18px;
+            font-weight: 600;
+            color:#54585a;
+            text-transform: uppercase;
+            margin: 10px 51px 25px 10px;
+        }
+        &--arrow{
+            width:16px;
+            height:18px;
+            margin: 13px 10px 28px 73px;
+            flex-grow: 1;
+            text-align: end;
+            font-size: 18px;
+            color:#54585a;
+        }
+    }
+    &__Form{
+        display:flex;
+       flex-direction: column;
+        justify-content: center;
+        &--required{
+                @include label();
+        }
+        &--input{
+            @include input();
+        }
+    }
+}
+.div-container{
+    display:flex;
+    height:30px;
+    &__button{
+        width:140px;
+        height:30px;
+       margin:0;
+        padding: 3px 0px 7px;
+        border-radius: 3px;
+        box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.32);
+        background-color:$colorMain;
+        color:white;
+    }
+    &__check{
+        width:30px;
+        height: 30px;
+        border:solid 1px #a2deaf;
+        margin-left:20px;
     }
 }

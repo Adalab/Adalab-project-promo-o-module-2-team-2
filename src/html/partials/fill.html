@@ -1,22 +1,42 @@
 <fieldset class="Fill">
     <legend class="Fill__anunc">
-        <i class="far fa-keyboard"></i>
-        <h2>Rellena</h2>
-        <i class="fas fa-chevron-down"></i>
+        <i class="far fa-keyboard Fill__anunc--icon"></i>
+        <h2 class="Fill__anunc--h2">Rellena</h2>
+        <i class="fas fa-chevron-down Fill__anunc--arrow"></i>
     </legend>
-    <label for="name" class="required">Nombre completo</label>
-    <input id="name" type="text" placeholder="Ej. Sally Jill" name="name" required />
-    <label for="position" class="required">Puesto</label>
-    <input type="position" id="position" name="position" placeholder="Ej. Front-end unicorn" required />
-    <label for="image">Imagen de perfil</label>
-    <input type="file" id="image" name="image" accept="image/png, image/jpeg">
-    <input type="checkbox">
-    <label for="email" class="required">Email</label>
-    <input type="email" id="email" name="email" placeholder="Ej. sally.jill@gmail.com" required />
-    <label for="telephone">Teléfono</label>
-    <input type="tel" id="telephone" placeholder=" Ej: 555-55-55-55" name="telephone" />
-    <label for="linkedin">LinkedIn</label>
-    <input type="text" id="linkedin" placeholder=" Ej: linkedin.com/in/sally.hill" name="linkedin" />
-    <label for="github">Github</label>
-    <input type="text" id="github" placeholder=" Ej: @sally-hill" name="github" />
+    <section class="Fill__Form">
+        <label for="name" class="Fill__Form--required">Nombre completo</label>
+
+        <input id="name" class="Fill__Form--input" type="text" placeholder="Ej. Sally Jill" name="name" required />
+
+        <label for="position" class="Fill__Form--required">Puesto</label>
+
+        <input type="position" id="position" name="position" class="Fill__Form--input"
+            placeholder="Ej. Front-end unicorn" required />
+
+        <label for="image" class="Fill__Form--required">Imagen de perfil</label>
+
+        <div class="div-container">
+            <input type="file" id="image" name="image" accept="image/png, image/jpeg" value="Añadir imagen"
+                class="div-container__button">
+            <input type="checkbox" class="div-container__check">
+        </div>
+        <label for="email" class="Fill__Form--required">Email</label>
+
+        <input type="email" class="Fill__Form--input" id="email" name="email" placeholder="Ej. sally.jill@gmail.com"
+            required />
+
+        <label for="telephone" class="Fill__Form--required">Teléfono</label>
+
+        <input type="tel" class="Fill__Form--input" id="telephone" placeholder=" Ej: 555-55-55-55" name="telephone" />
+
+        <label for="linkedin" class="Fill__Form--required">LinkedIn</label>
+
+        <input type="text" class="Fill__Form--input" id="linkedin" placeholder=" Ej: linkedin.com/in/sally.hill"
+            name="linkedin" />
+
+        <label for="github" class="Fill__Form--required">Github</label>
+
+        <input type="text" class="Fill__Form--input" id="github" placeholder=" Ej: @sally-hill" name="github" />
+    </section>
 </fieldset>
