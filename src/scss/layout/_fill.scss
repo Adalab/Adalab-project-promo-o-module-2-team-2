@@ -1,5 +1,5 @@
 
-.Fill{
+.fill{
     display:flex;
     justify-content:center;
     border:none;
@@ -35,10 +35,11 @@
             color:#54585a;
         }
     }
-    &__Form{
+    &__form{
         display:flex;
        flex-direction: column;
         justify-content: center;
+        width:100%;
         &--required{
                 @include label();
         }
