@@ -7,6 +7,13 @@
   align-items: center;
   padding-top: 18px;
   padding-bottom: 20px;
+  @media all and(min-width:768px) {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    text-align: end;
+    width: 100%;
+  }
 }
 
 .copyFooter {
@@ -15,9 +22,17 @@
   color: #b8b8b9;
   text-transform: none;
   margin: 0 0 12px;
+  @media all and(min-width:768px) {
+    padding-left: 41px;
+  }
 }
 
 .logoFooter {
   width: 103px;
   height: 40px;
+  @media all and(min-width:768px) {
+    padding-right: 40px;
+    width: 103px;
+    height: 40px;
+  }
 }
