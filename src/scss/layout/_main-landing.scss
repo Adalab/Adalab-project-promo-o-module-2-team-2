@@ -10,11 +10,21 @@
   width: 250px;
   height: 63px;
   margin: 95px 35px 35.4px 35px;
+  @media all and(min-width:768px) {
+    width: 419px;
+    height: 105px;
+    margin: 350px 174px 31px 175px;
+  }
 }
 .h1 {
   color: $colorMain;
   font-size: 19.2px;
   padding: 0px;
+  margin: 0px 49.3px 0px 47px;
+  @media all and(min-width:768px) {
+    font-size: 24px;
+    margin: 0px 245px 0px 245px;
+  }
 }
 
 .description {
@@ -25,6 +35,11 @@
   margin: 0px 28px 17.8px 27.2px;
   flex-wrap: wrap;
   max-width: 264.8px;
+  @media all and(min-width:768px) {
+    font-size: 16px;
+    max-width: 331px;
+    margin: 0px 218px 27px 219px;
+  }
 }
 
 .indexList {
@@ -34,9 +49,13 @@
   align-items: center;
   font-family: $fontMain;
   font-size: 12.8px;
-  border: solid 1.6px $colorMain;
+  border: solid 1.6px var $colorMain;
   margin: 0px 26.4px 38.6px 25.6px;
   padding: 15px 20px 10px 20px;
+  @media all and(min-width:768px) {
+    font-size: 16px;
+    margin: 0px 221px 196px 222px;
+  }
 }
 .indexIcon {
   font-size: 22.4px;
