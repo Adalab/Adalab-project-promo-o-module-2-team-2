@@ -18,11 +18,13 @@
 }
 
 .description {
+  text-align: center;
   color: $colorLegend;
   font-family: $fontMain;
   font-size: 12.8px;
   margin: 0px 28px 17.8px 27.2px;
   flex-wrap: wrap;
+  max-width: 264.8px;
 }
 
 .indexList {
