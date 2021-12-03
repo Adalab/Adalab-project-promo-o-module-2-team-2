@@ -1,0 +1,59 @@
+.share {
+    margin: 10px 0 30px;
+    color: $colorText;
+    font-family: $fontMain;
+    text-transform: uppercase;
+    border: none;
+    border-bottom: 1px #d8d8d8 solid;
+
+    &__legend {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 30px;
+
+        &--wrapper {
+            display: flex;
+            align-items: center;
+        }
+    
+        &--icon {
+            color: $colorMain;
+            font-size: 18px;
+            margin-right: 10px;
+        }
+
+        &--title {
+            font-size: 18px;
+        }
+    }
+    &__button {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 30px;
+        border-bottom: 1px #d8d8d8 solid;
+
+        &--item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 199px;
+            height: 50px;
+            color: white;
+            background-color: $colorMain;
+            border: none;
+            border-radius: 12px;
+            box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.32);
+            font-family: $fontMain;
+            font-size: 18px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        &--icon {
+            margin-right: 9px;
+            font-size: 22px;
+        }
+    }
+}
