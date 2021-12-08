@@ -1,0 +1,95 @@
+.share {
+    margin: 10px 0 0;
+    color: $colorText;
+    font-family: $fontMain;
+    text-transform: uppercase;
+    border: none;
+    border-bottom: 1px #d8d8d8 solid;
+
+    &__legend {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 30px;
+
+        &--wrapper {
+            display: flex;
+            align-items: center;
+        }
+    
+        &--icon {
+            color: $colorMain;
+            font-size: 18px;
+            margin-right: 10px;
+        }
+
+        &--title {
+            font-size: 18px;
+        }
+    }
+    &__button {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 30px;
+        border-bottom: 1px #d8d8d8 solid;
+
+        &--item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 199px;
+            height: 50px;
+            color: white;
+            background-color: $colorMain;
+            // background-color: #d5d5d5;
+            border: none;
+            border-radius: 12px;
+            box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.32);
+            font-family: $fontMain;
+            font-size: 18px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        &--icon {
+            margin-right: 9px;
+            font-size: 22px;
+        }
+    }
+
+    &__paragraph {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0 30px;
+        text-align: center;
+        text-transform: none;
+
+        &--text {
+            padding: 5px 0 10px;
+            color: $colorMain;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        &--twButton {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 181px;
+            height: 30px;
+            background-color: #00a0f5;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.32);
+            font-size: 14px;
+        }
+
+        &--icon {
+            margin-right: 9px;
+            font-size: 18px;
+        }
+    }
+}

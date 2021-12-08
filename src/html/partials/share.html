@@ -1,24 +1,30 @@
-<fieldset>
-    <legend>
-        <i class="fas fa-share-alt"></i>
-        <h2>Comparte</h2>
+<fieldset class="share">
+    <legend class="share__legend">
+        <div class="share__legend--wrapper">
+            <i class="fas fa-share-alt share__legend--icon"></i>
+            <h2 class="share__legend--title">Comparte</h2>
+        </div>
         <a><i class="fas fa-chevron-down"></i></a>
     </legend>
-    <div>
-        <button>
-            <i class="far fa-address-card"></i>
+    <div class="share__button">
+        <button class="share__button--item">
+            <i class="far fa-address-card share__button--icon"></i>
             <span>Crear tarjeta</span>
         </button>
     </div>
     <!-- AFTER -->
-    <div>
+    <div class="share__paragraph">
         <h3>La tarjeta ha sido creada:</h3>
         <a href="#">
-            <p>https://awesome-profile-card.com?id=A456DF0001</p>
+            <p class="share__paragraph--text">
+                https://awesome-profile-card.com?id=A456DF00
+            </p>
         </a>
-        <button>
-            <i class="fab fa-twitter"></i>
-            <span>Compartir en twitter</span>
-        </button>
+        <a href="#">
+            <button class="share__paragraph--twButton">
+                <i class="fab fa-twitter share__paragraph--icon"></i>
+                <span>Compartir en twitter</span>
+            </button>
+        </a>
     </div>
 </fieldset>
