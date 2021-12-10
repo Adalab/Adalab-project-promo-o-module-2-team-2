@@ -34,7 +34,7 @@
 // //Listener para share
 // collapsableTitle3.addEventListener('click', handlerClickTitle3);
 
-//<----------------------------- Forma Corta ----------------------------->
+//<----------------------------- Forma Optimizada ----------------------------->
 //<----------------------------------****---------------------------------->
 //Elemento HTML para design
 const collapsableTitle1 = document.querySelector('.js_collapsable_title_design');
@@ -45,10 +45,14 @@ const collapsableTitle3 = document.querySelector('.js_collapsable_title_share');
 //Elemento HTML para arrow
 const arrowRotate = document.querySelector('.js-arrow');
 
-//Hadler para design
+//Hadler para todos
 function handlerClickTitle(event) {
   event.currentTarget.parentNode.classList.toggle('collapsed');
-  arrowRotate.classList.toggle('rotate');
+  if (event.currentTarget.parentNode.classList.contains('collapsed')) {
+    arrowRotate.classList.add('rotate');
+  } else {
+    arrowRotate.classList.remove('rotate');
+  }
 }
 //Listener para design
 collapsableTitle1.addEventListener('click', handlerClickTitle);
