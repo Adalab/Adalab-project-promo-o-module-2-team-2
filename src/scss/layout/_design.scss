@@ -4,13 +4,11 @@
     text-transform: uppercase;
     border: none;
     border-bottom: 1px #d8d8d8 solid;
-
     &__legend {
         display: flex;
         justify-content: space-between;
         align-items: center;
         width: 100%;
-    
         &--wrapper {
             display: flex;
             align-items: center;
