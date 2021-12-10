@@ -10,11 +10,7 @@ const arrowElement = document.querySelector('.js-arrow');
 function handlerClickHeader(event){
     const currentTarget = event.currentTarget;
     currentTarget.parentNode.classList.toggle('collapsed');
-     if(arrowElement.classList.contains('js-arrow')){
-        currentTarget.classList.toggle('rotate');  
-     } 
-    
-
+    currentTarget.querySelector('.js-arrow').classList.toggle('rotate');
 }
  
 //listener
