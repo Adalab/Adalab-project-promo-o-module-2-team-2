@@ -23,3 +23,7 @@ a {
 .collapsed .js_share_content {
   display: none;
 }
+//<----------------------------- Girar Arrow ----------------------------->
+.js-arrow .rotate {
+  transform: translate(180deg);
+}

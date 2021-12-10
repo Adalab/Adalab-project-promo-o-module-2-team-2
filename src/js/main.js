@@ -42,10 +42,13 @@ const collapsableTitle1 = document.querySelector('.js_collapsable_title_design')
 const collapsableTitle2 = document.querySelector('.js_collapsable_title_fill');
 //Elemento HTML para share
 const collapsableTitle3 = document.querySelector('.js_collapsable_title_share');
+//Elemento HTML para arrow
+const arrowRotate = document.querySelector('.js-arrow');
 
 //Hadler para design
 function handlerClickTitle(event) {
   event.currentTarget.parentNode.classList.toggle('collapsed');
+  arrowRotate.classList.toggle('rotate');
 }
 //Listener para design
 collapsableTitle1.addEventListener('click', handlerClickTitle);
