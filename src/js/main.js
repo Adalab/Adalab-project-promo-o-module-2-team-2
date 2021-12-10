@@ -4,13 +4,17 @@
 const collapsedDesignHeader = document.querySelector('.js-collapsable-design');
 const collapsedFillHeader = document.querySelector('.js-collapsable-fill');
 const collapsedShareHeader = document.querySelector('.js-collapsable-share');
+const arrowElement = document.querySelector('.js-arrow');
 
 //handler
 function handlerClickHeader(event){
-    
     const currentTarget = event.currentTarget;
-    console.log(currentTarget);
     currentTarget.parentNode.classList.toggle('collapsed');
+     if(arrowElement.classList.contains('js-arrow')){
+        currentTarget.classList.toggle('rotate');  
+     } 
+    
+
 }
  
 //listener
