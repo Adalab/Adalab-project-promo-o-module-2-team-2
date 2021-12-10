@@ -1,63 +1,63 @@
+.fill {
+  display: flex;
+  justify-content: center;
+  border: none;
+  border-bottom: 1px #d8d8d8 solid;
+  &__anunc {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    &--wrapper {
+      display: flex;
+      &--icon {
+        width: 21px;
+        height: 18px;
+        margin: 13px 0 28px 0;
+        font-size: 18px;
+        color: $colorMain;
+        line-height: 1.1;
+        text-align: end;
+      }
+      &--h2 {
+        @include text-h2;
+      }
+    }
 
-.fill{
-    display:flex;
-    justify-content:center;
-    border:none;
-    &__anunc{
-        display:flex;
-        width:100%;
-        &--icon{
-            width:21px;
-            height:18px;
-            margin: 13px 10px 28px 0;
-            font-size: 18px;
-            color:$colorMain;
-            line-height: 1.10;
-            text-align: end;
-        }
-        &--h2{
-           @include text-h2;
-        }
-        &--arrow{
-            width:16px;
-            height:18px;
-            margin: 13px 10px 28px 73px;
-            flex-grow: 1;
-            text-align: end;
-            font-size: 18px;
-            color:#54585a;
-        }
+    &--arrow {
+      margin: 13px 0 28px 73px;
+      color: #54585a;
     }
-    &__form{
-        display:flex;
-       flex-direction: column;
-        justify-content: center;
-        width:100%;
-        &--required{
-            @include label();
-        }
-        &--input{
-            @include input();
-        }
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    &--required {
+      @include label();
     }
+    &--input {
+      @include input();
+    }
+  }
 }
-.div-container{
-    display:flex;
-    height:30px;
-    &__button{
-        width:140px;
-        height:30px;
-       margin:0;
-        padding: 3px 0px 7px;
-        border-radius: 3px;
-        box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.32);
-        background-color:$colorMain;
-        color:white;
-    }
-    &__check{
-        width:30px;
-        height: 30px;
-        border:solid 1px #a2deaf;
-        margin-left:20px;
-    }
+.div-container {
+  display: flex;
+  height: 30px;
+  &__button {
+    width: 140px;
+    height: 30px;
+    margin: 0;
+    padding: 3px 0px 7px;
+    border-radius: 3px;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.32);
+    background-color: $colorMain;
+    color: white;
+  }
+  &__check {
+    width: 30px;
+    height: 30px;
+    border: solid 1px #a2deaf;
+    margin-left: 20px;
+  }
 }
