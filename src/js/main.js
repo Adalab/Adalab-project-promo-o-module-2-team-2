@@ -1,14 +1,22 @@
 'use strict';
 
 //Traer elementos
-const collapsedHeader = document.querySelector('.js-collapsable-title1');
+const collapsedDesignHeader = document.querySelector('.js-collapsable-design');
+const collapsedFillHeader = document.querySelector('.js-collapsable-fill');
+const collapsedShareHeader = document.querySelector('.js-collapsable-share');
 
 //handler
 function handlerClickHeader(event){
-event.currentTarget.classList.toggle('collapsed'); 
+    
+    const currentTarget = event.currentTarget;
+    console.log(currentTarget);
+    currentTarget.parentNode.classList.toggle('collapsed');
 }
  
 //listener
-collapsedHeader.addEventListener('click', handlerClickHeader);
+collapsedDesignHeader.addEventListener('click', handlerClickHeader);
+collapsedFillHeader.addEventListener('click', handlerClickHeader);
+collapsedShareHeader.addEventListener('click', handlerClickHeader);
+
 
 
