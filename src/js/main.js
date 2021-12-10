@@ -42,17 +42,12 @@ const collapsableTitle1 = document.querySelector('.js_collapsable_title_design')
 const collapsableTitle2 = document.querySelector('.js_collapsable_title_fill');
 //Elemento HTML para share
 const collapsableTitle3 = document.querySelector('.js_collapsable_title_share');
-//Elemento HTML para arrow
-const arrowRotate = document.querySelector('.js-arrow');
 
 //Hadler para todos
 function handlerClickTitle(event) {
-  event.currentTarget.parentNode.classList.toggle('collapsed');
-  if (event.currentTarget.parentNode.classList.contains('collapsed')) {
-    arrowRotate.classList.add('rotate');
-  } else {
-    arrowRotate.classList.remove('rotate');
-  }
+  const elementSelected = event.currentTarget;
+  elementSelected.parentNode.classList.toggle('collapsed');
+  elementSelected.querySelector('.js-arrow').classList.toggle('rotate');
 }
 //Listener para design
 collapsableTitle1.addEventListener('click', handlerClickTitle);
