@@ -23,9 +23,7 @@
         &--arrow{
             width:16px;
             height:18px;
-            margin: 13px 10px 28px 73px;
-            flex-grow: 1;
-            text-align: end;
+            margin: 13px 0 28px 365px;
             font-size: 18px;
             color:#54585a;
         }
@@ -49,15 +47,12 @@
     &__button{
         width:140px;
         height:30px;
-        margin:0;
-        padding: 5px 0px 7px;
+       margin:0;
+        padding: 3px 0px 7px;
         border-radius: 3px;
         box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.32);
         background-color:$colorMain;
         color:white;
-        font-size: 14px;
-        text-align: center;
-        font-family: $fontCard;
     }
     &__check{
         width:30px;
