@@ -1,4 +1,5 @@
 'use strict';
+//<----------------- Colapsable (versión 1) ----------------->
 // const collapsableHeader = document.querySelector ('.js_collapsable_title');
 
 // function handlerClickHeader() {
