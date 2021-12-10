@@ -39,3 +39,10 @@ function handleKeyEmail() {
 }
 nameInput.addEventListener('keyup', handleKeyName);
 emailInput.addEventListener('keyup', handleKeyEmail);
+
+//<----------------- Input version 2 ----------------->
+const data = {
+  name: '',
+  job: '',
+  email: '',
+};
