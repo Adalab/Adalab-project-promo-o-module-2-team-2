@@ -2,7 +2,9 @@
 .fill{
     display:flex;
     justify-content:center;
+    padding-bottom: 30px;
     border:none;
+    border-bottom: 1px #d8d8d8 solid;
     &__anunc{
         display:flex;
         width:100%;
