@@ -223,5 +223,5 @@ nameInput.addEventListener('keyup', handleKeyData);
 jobInput.addEventListener('keyup', handleKeyData);
 emailInput.addEventListener('keyup', handleKeyData);
 phoneInput.addEventListener('keyup', handleKeyData);
-inkedinInput.addEventListener('keyup', handleKeyData);
+linkedinInput.addEventListener('keyup', handleKeyData);
 githubInput.addEventListener('keyup', handleKeyData);
