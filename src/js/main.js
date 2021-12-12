@@ -47,6 +47,22 @@ const collapsableTitle3 = document.querySelector('.js_collapsable_title_share');
 //Hadler para todos
 function handlerClickTitle(event) {
   const elementSelected = event.currentTarget;
+
+  if (!event.currentTarget.parentNode.classList.contains('collapsed')) {
+    event.currentTarget.parentNode.classList.toggle('collapsed');
+    elementSelected.querySelector('.js-arrow').classList.toggle('rotate');
+    return;
+  }
+  //Elemento HTML comun para todos los title
+  const collapsableTitleList = document.querySelectorAll('.js_title_list');
+
+  //Bucle para que por defecto se cierre el resto de secciones al abrir una
+  for (let i = 0; i < collapsableTitleList.length; i++) {
+    collapsableTitleList[i].parentNode.classList.add('collapsed');
+    collapsableTitleList[i].querySelector('.js-arrow').classList.remove('rotate');
+  }
+  //funcion hadler
+
   elementSelected.parentNode.classList.toggle('collapsed');
   elementSelected.querySelector('.js-arrow').classList.toggle('rotate');
 }
