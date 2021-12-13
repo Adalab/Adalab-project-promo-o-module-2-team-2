@@ -1,6 +1,6 @@
-@import "./_design.scss";
-@import "./_fill.scss";
-@import "./_share.scss";
+@import './_design.scss';
+@import './_fill.scss';
+@import './_share.scss';
 
 .whiteSection {
   padding: 27px 20px 30px 20px;
@@ -15,9 +15,6 @@
   @media all and(min-width:1200px) {
     width: 60%;
   }
-}
-.collapsed {
-  display: none;
 }
 
 .rotate {

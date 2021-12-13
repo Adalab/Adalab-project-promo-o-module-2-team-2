@@ -3,9 +3,27 @@
   margin: 0;
   padding: 0;
 }
-li{
+li {
   list-style-type: none;
 }
-a{
+a {
   text-decoration: none;
+}
+//<----------------------------- Collapsed JS ----------------------------->
+
+//<----------------------------- Para versión larga ----------------------------->
+// .js_design_content.collapsed,
+// .js_fill_content.collapsed,
+// .js_share_content.collapsed {
+//   display: none;
+// }
+//<----------------------------- Para versión corta ----------------------------->
+.collapsed .js_design_content,
+.collapsed .js_fill_content,
+.collapsed .js_share_content {
+  display: none;
+}
+//<----------------------------- Girar Arrow ----------------------------->
+.rotate {
+  transform: rotate(180deg);
 }
