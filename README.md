@@ -1,8 +1,8 @@
-<div style="text-align:center"><img src="http://beta.adalab.es/project-promo-o-module-2-team-2/assets/images/logo-awesome-profile-cards.svg" /></div>
+![texto_alternativo](http://beta.adalab.es/project-promo-o-module-2-team-2/assets/images/logo-awesome-profile-cards.svg)
 
-# <div style="text-align:center">Awesome profile-cards</div>
+# Awesome profile-cards
 
-#### <div style="text-align:center">Project Module-2 (Team 2)</div>
+#### Project Module-2 (Team 2)
 
 Este repositorio contiene el proyecto que hemos desarrollado para el módulo 2 del "Bootcamp Front-end dev" de Adalab.
 
@@ -20,10 +20,20 @@ En este proyecto vamos a realizar una aplicación web que nos permite crear una 
 - Mejorar la comunicación entre los miembros del equipo a la vez que se desarrolan habilidades de trabajo en remoto.
 - Mejorar la habilidad de comunicación en público al exponer el proyecto en la sesión final.
 
-###Diseño
+### Diseño
 
-<div style="text-align:center"><img src="https://books.adalab.es/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FyO3z6SoRcsIyDEmyvjVP%2Fuploads%2Fgit-blob-74faa296887b41c2e61abf9ff678b72f45dfa6d5%2Fs2-tablet.png?alt=media" /></div>
+![imagen del diseño](https://books.adalab.es/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FyO3z6SoRcsIyDEmyvjVP%2Fuploads%2Fgit-blob-74faa296887b41c2e61abf9ff678b72f45dfa6d5%2Fs2-tablet.png?alt=media)
 
 ### Componentes del equipo
+
+[![Autor](https://img.shields.io/badge/github-Laura%20Carbajales-pink?style=for-the-badge&logo=github)](https://github.com/Laura-Carbajales)
+
+[![Autor](https://img.shields.io/badge/github-Maria%20Rodriguez-red?style=for-the-badge&logo=github)](https://github.com/mariarguezp)
+
+[![Autor](https://img.shields.io/badge/github-Paula%20Alvarez-blue?style=for-the-badge&logo=github)](https://github.com/Paula-AlvarezB)
+
+[![Autor](https://img.shields.io/badge/github-Silvia%20Dimol-green?style=for-the-badge&logo=github)](https://github.com/SilviaDimol)
+
+[![Autor](https://img.shields.io/badge/github-Mariana%20Viana-yellow?style=for-the-badge&logo=github)](https://github.com/Vianam92)
 
 ### Contacto
