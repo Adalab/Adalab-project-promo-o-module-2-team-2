@@ -1,1 +1,1 @@
-"use strict";
+"use strict";const collapsableDesignElement=document.querySelector(".js-collapsable-title"),collapsableDesignContent=document.querySelector(".js-design-content"),collapsableArrow=document.querySelector(".js-arrow");function handleClickHeader(){collapsableDesignContent.classList.contains("collapsed"),collapsableDesignContent.classList.toggle("collapsed"),collapsableArrow.classList.toggle("rotate")}collapsableDesignElement.addEventListener("click",handleClickHeader);
