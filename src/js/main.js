@@ -21,10 +21,10 @@ function handlerClickTitle(event) {
   const collapsableTitleList = document.querySelectorAll('.js_title_list');
 
   //Bucle para que los elementos de "collapsableTitleList" sean recorridos uno a uno y colapsados (e igual con la flecha).
-  for (let i = 0; i < collapsableTitleList.length; i++) {
-    collapsableTitleList[i].parentNode.classList.add('collapsed');
-    collapsableTitleList[i].querySelector('.js-arrow').classList.remove('rotate');
-  }
+  // for (let i = 0; i < collapsableTitleList.length; i++) {
+  //   collapsableTitleList[i].parentNode.classList.add('collapsed');
+  //   collapsableTitleList[i].querySelector('.js-arrow').classList.remove('rotate');
+  // }
   //Colapsar y rotar flecha al clickar
   elementSelected.parentNode.classList.toggle('collapsed');
   elementSelected.querySelector('.js-arrow').classList.toggle('rotate');
