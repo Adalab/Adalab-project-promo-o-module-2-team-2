@@ -28,11 +28,11 @@ En este proyecto vamos a realizar una aplicación web que nos permite crear una 
 
 [![Autor](https://img.shields.io/badge/github-Laura%20Carbajales-pink?style=for-the-badge&logo=github)](https://github.com/Laura-Carbajales)
 
+[![Autor](https://img.shields.io/badge/github-Silvia%20Dimol-green?style=for-the-badge&logo=github)](https://github.com/SilviaDimol)
+
 [![Autor](https://img.shields.io/badge/github-Maria%20Rodriguez-red?style=for-the-badge&logo=github)](https://github.com/mariarguezp)
 
 [![Autor](https://img.shields.io/badge/github-Paula%20Alvarez-blue?style=for-the-badge&logo=github)](https://github.com/Paula-AlvarezB)
-
-[![Autor](https://img.shields.io/badge/github-Silvia%20Dimol-green?style=for-the-badge&logo=github)](https://github.com/SilviaDimol)
 
 [![Autor](https://img.shields.io/badge/github-Mariana%20Viana-yellow?style=for-the-badge&logo=github)](https://github.com/Vianam92)
 
