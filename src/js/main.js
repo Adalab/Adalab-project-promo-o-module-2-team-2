@@ -39,8 +39,6 @@ collapsableTitle2.addEventListener('click', handlerClickTitle);
 //Listener para share
 collapsableTitle3.addEventListener('click', handlerClickTitle);
 
-/*
-//Gestión de los inputs
 
 //Creación de objeto
 const userData = {
@@ -64,50 +62,67 @@ const emailPreview = document.querySelector('.js-envelope');
 const linkedinPreview = document.querySelector('.js-linkedinIcon');
 const githubPreview = document.querySelector('.js-githubIcon');
 
-
-//Funciones
-
-function renderPreview () {
-
-  namePreview.innerHTML = userData.name;
-  positionPreview.innerHTML = userData.position;
-  telPreview.href = `tel:+34${userData.tel}`;
-  emailPreview.href = `mailto:${userData.email}`;
-  linkedinPreview.href = `https://www.linkedin.com/in/${userData.linkedin}`;
-  githubPreview.href = `https://www.github.com/${userData.github}`;
-
-  if (userData.name === '') {
-    namePreview.innerHTML = 'Nombre Apellido';
-  } else {
+//function
+function renderPreview(){
+  if(userData.name === ""){
+    namePreview.innerHTML = "Nombre Apellidos";
+  }else{
     namePreview.innerHTML = userData.name;
+  }
+  if(userData.position === ""){
+    positionPreview.innerHTML = "Front-End Developer";
+  }else{
+    positionPreview.innerHTML = userData.position;
+  }
+  if(userData.tel === ""){
+    telPreview.innerHTML = "";
+  }else{
+    telPreview.innerHTML = `mailto:+34${userData.tel}`;
+  }
+  if(userData.email === ""){
+    emailPreview.innerHTML = "";
+  }else{
+    emailPreview.innerHTML = `mailto:${userData.email}`;
+  }
+  if(userData.linkedin === ""){
+    linkedinPreview.innerHTML = "";
+  }else{
+    linkedinPreview.innerHTML = `mailto:https://www.linkedin/in/${userData.name}`;
+  }if(userData.github === ""){
+    githubPreview.innerHTML = "";
+  }else{
+    githubPreview.innerHTML = `mailto:https://www.github/${userData.name}`;
   }
 }
 
 //Handler
-function handleKeyUpWriteInputs(event) {
-  const inputValue = event.currentTarget.value;
-  renderPreview();
-  
-}
-
-//Listener
-allInputs.addEventListener('keyup', handleKeyUpWriteInputs); */
-
-
-//NOMBRE
-//Traer html
-const namePreview = document.querySelector('.js_preview_title');
-const nameInput = document.querySelector('.js_name');
-
-//handler
-function writeName () {
-  if (nameInput.value === ('')) {
-    namePreview.innerHTML = 'Nombre Apellido';
-
-  } else {
-  namePreview.innerHTML = nameInput.value;
+function handleWriteInputs(event) {
+  const userInput = event.currentTarget.id;
+  const userValue = event.currentTarget.value;
+  console.log(userInput);
+  if(userInput === 'name'){
+    userData.name = userValue;
+  }else if(userInput === 'position'){
+    userData.position = userValue;
+  }else if(userInput === 'telephone'){
+    userData.tel = userValue;
+  }else if(userInput === 'email'){
+    userData.email = userValue;
+  }else if(userInput === 'linkedin'){
+    userData.linkedin = userValue;
+  }else if(userInput === 'linkedin'){
+    userData.linkedin = userValue;
+  }else if(userInput === 'github'){
+    userData.github = userValue;
   }
+renderPreview();
 }
 
-//listener
-nameInput.addEventListener('keyup', writeName);
+for(const eachInput of allInputs){
+  eachInput.addEventListener('keyup',handleWriteInputs); 
+}
+
+
+console.log(userData);
+
+
