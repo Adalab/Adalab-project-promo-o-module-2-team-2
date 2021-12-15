@@ -337,6 +337,33 @@ for (const eachInput of allInput) {
   eachInput.addEventListener('keyup', handleWriteInput);
 }
 
+//<--------------------- Botón de reset --------------------->
+//<---------------------****---------------------------------->
+// //HTML
+// const resetButton = document.querySelector('.js-resetButton');
+
+// //Funciones
+// function handleClickReset() {
+//   previewName.innerHTML = Data.name;
+//   previewJob.innerHTML = Data.job;
+//   previewPhone.href = `tel:+34${Data.phone}`;
+//   previewEmail.href = `mailto: ${Data.email}`;
+//   previewLinkedin.href = `https://www.linkedin.com/in/${Data.linkedin}`;
+//   previewGithub.href = `https://github.com/${Data.gitHub}`;
+
+//   const userInput = event.currentTarget.name; //name, job, phone
+//   const userValue = event.currentTarget.value; //Lo que está escribiendo la usuaria
+
+//   if (userInput === 'name') {
+//     Data.name = 'Nombre y Apellido';
+//   } else if (userInput === 'position') {
+//     Data.job = 'Font-end developer';
+
+// }
+
+// //Listener
+// resetButton.addEventListener('click', handleClickReset);
+
 //<--------------------- Cambio de colores de la card --------------------->
 //<----------------------------------****---------------------------------->
 
