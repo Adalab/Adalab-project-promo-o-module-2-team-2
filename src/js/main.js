@@ -262,13 +262,19 @@ const Data = {
 const allInput = document.querySelectorAll('.js-input');
 const previewName = document.querySelector('.js_preview_title');
 const previewJob = document.querySelector('.js_preview_subtitle');
+const previewPhone = document.querySelector('.js-phone');
 const previewEmail = document.querySelector('.js-envelope');
+const previewLinkedin = document.querySelector('.js-linkedinIcon');
+const previewGithub = document.querySelector('.js-githubIcon');
 
 //Funciones
 function renderPreview() {
   previewName.innerHTML = Data.name;
   previewJob.innerHTML = Data.job;
+  previewPhone.href = `tel:+34${Data.phone}`;
   previewEmail.href = `mailto: ${Data.email}`;
+  previewLinkedin.href = `https://www.linkedin.com/in/${Data.linkedin}`;
+  previewGithub.href = `https://github.com/${Data.gitHub}`;
 
   if (Data.name === '') {
     previewName.innerHTML = 'Nombre y Apellido';
@@ -280,10 +286,25 @@ function renderPreview() {
   } else {
     previewJob.innerHTML = Data.job;
   }
-  if (Data.job === '') {
+  if (Data.phone === '') {
+    previewPhone.innerHTML.href = '';
+  } else {
+    previewPhone.innerHTML.href = `tel:+34${Data.phone}`;
+  }
+  if (Data.email === '') {
     previewEmail.innerHTML.href = '';
   } else {
     previewEmail.innerHTML.href = `mailto: ${Data.email}`;
+  }
+  if (Data.linkedin === '') {
+    previewLinkedin.innerHTML.href = '';
+  } else {
+    previewLinkedin.innerHTML.href = `https://www.${Data.linkedin}`;
+  }
+  if (Data.gitHub === '') {
+    previewGithub.innerHTML.href = '';
+  } else {
+    previewGithub.innerHTML.href = `https://github.com/${Data.gitHub}`;
   }
 }
 
@@ -300,17 +321,18 @@ function handleWriteInput(event) {
     Data.job = userValue;
   } else if (userInput === 'email') {
     Data.email = userValue;
-  } else if (userInput === 'phone') {
+  } else if (userInput === 'telephone') {
     Data.phone = userValue;
   } else if (userInput === 'linkedin') {
     Data.linkedin = userValue;
-  } else if (userInput === 'gitHub') {
+  } else if (userInput === 'github') {
     Data.gitHub = userValue;
   }
 
   renderPreview();
 }
 
+//Listener
 for (const eachInput of allInput) {
   eachInput.addEventListener('keyup', handleWriteInput);
 }
