@@ -1,16 +1,18 @@
 .footer {
+  width: 100vw;
   background-color: #ffffff;
-  border-top: 1px #d8d8d8 solid;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  padding-top: 18px;
+  padding-bottom: 20px;
   @media all and(min-width:768px) {
     display: flex;
     justify-content: space-between;
     flex-direction: row;
     text-align: end;
+    width: 100%;
   }
 }
 
@@ -19,7 +21,8 @@
   font-size: 14px;
   color: #b8b8b9;
   text-transform: none;
-  object-fit:contain;
+  margin: 0 0 12px;
+  object-fit: contain;
   @media all and(min-width:768px) {
     margin-left: 41px;
     line-height: 20px;
@@ -29,12 +32,10 @@
 .logoFooter {
   width: 103px;
   height: 40px;
-  object-fit:contain;
-  margin:5px;
+  object-fit: contain;
   @media all and(min-width:768px) {
     margin-right: 40px;
     width: 103px;
     height: 40px;
-    margin-top:10px;
   }
 }
