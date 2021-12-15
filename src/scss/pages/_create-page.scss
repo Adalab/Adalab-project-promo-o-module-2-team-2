@@ -1,0 +1,22 @@
+//Codigo para que el footer se mantenga en la parte de abajo
+.page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.maincontainer {
+  @media all and(min-width:768px) {
+    height: 100%;
+  }
+}
+.blueSection {
+  @media all and(min-width:768px) {
+    height: 100%;
+  }
+}
+.whiteSection {
+  @media all and(min-width:768px) {
+    height: 100%;
+  }
+}

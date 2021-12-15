@@ -106,10 +106,163 @@
         margin-right: 5px;
         text-align: center;
         line-height: 30px;
+        &:hover {
+          border: 2px solid $colorMain;
+        }
+
         & .icon {
           color: #114e4e;
+          &:hover {
+            color: $colorMain;
+          }
         }
       }
     }
+  }
+}
+
+.red_rectangle {
+  width: 5px;
+  height: 42px;
+  background-color: #bd1010;
+  grid-column: 1 / 2;
+  grid-row: 1 / 3;
+}
+.red_title {
+  font-family: $fontCard;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1.11;
+  text-transform: capitalize;
+  color: #420101;
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+}
+.red_icon {
+  color: #420101;
+  &:hover {
+    color: #a2deaf;
+  }
+}
+.red_item {
+  border: 2px solid #e95626;
+  width: 32px;
+  height: 32px;
+  border-radius: 16px;
+  margin-left: 5px;
+  margin-right: 5px;
+  text-align: center;
+  line-height: 30px;
+  &:hover {
+    border: 2px solid #a2deaf;
+  }
+}
+
+.yellow_rectangle {
+  width: 5px;
+  height: 42px;
+  background-color: #eab052;
+  grid-column: 1 / 2;
+  grid-row: 1 / 3;
+}
+.yellow_title {
+  font-family: $fontCard;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1.11;
+  text-transform: capitalize;
+  color: #3e5b65;
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+}
+.yellow_icon {
+  color: #3e5b65;
+  &:hover {
+    color: #eab052;
+  }
+}
+.yellow_item {
+  border: 2px solid #a0c0cf;
+  width: 32px;
+  height: 32px;
+  border-radius: 16px;
+  margin-left: 5px;
+  margin-right: 5px;
+  text-align: center;
+  line-height: 30px;
+  &:hover {
+    border: 2px solid #eab052;
+  }
+}
+.pink_rectangle {
+  width: 5px;
+  height: 42px;
+  background-color: #eab052;
+  grid-column: 1 / 2;
+  grid-row: 1 / 3;
+}
+.pink_title {
+  font-family: $fontCard;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1.11;
+  text-transform: capitalize;
+  color: #3e5b65;
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+}
+.pink_icon {
+  color: #3e5b65;
+  &:hover {
+    color: $colorMain;
+  }
+}
+.pink_item {
+  border: 2px solid #a0c0cf;
+  width: 32px;
+  height: 32px;
+  border-radius: 16px;
+  margin-left: 5px;
+  margin-right: 5px;
+  text-align: center;
+  line-height: 30px;
+  &:hover {
+    border: 2px solid $colorMain;
+  }
+}
+.pink_rectangle {
+  width: 5px;
+  height: 42px;
+  background-color: rgb(238, 44, 112);
+  grid-column: 1 / 2;
+  grid-row: 1 / 3;
+}
+.pink_title {
+  font-family: $fontCard;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1.11;
+  text-transform: capitalize;
+  color: palevioletred;
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+}
+.pink_icon {
+  color: palevioletred;
+  &:hover {
+    color: $colorMain;
+  }
+}
+.pink_item {
+  border: 2px solid pink;
+  width: 32px;
+  height: 32px;
+  border-radius: 16px;
+  margin-left: 5px;
+  margin-right: 5px;
+  text-align: center;
+  line-height: 30px;
+  &:hover {
+    border: 2px solid $colorMain;
   }
 }
