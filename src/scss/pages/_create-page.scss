@@ -1,4 +1,7 @@
 //Codigo para que el footer se mantenga en la parte de abajo
+main {
+  flex-grow: 3;
+}
 .page {
   height: 100vh;
   display: flex;
