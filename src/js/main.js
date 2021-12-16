@@ -39,22 +39,17 @@ collapsableTitle2.addEventListener('click', handlerClickTitle);
 //Listener para share
 collapsableTitle3.addEventListener('click', handlerClickTitle);
 
-/*
-//Gestión de los inputs
-
 //Creación de objeto
 const userData = {
   name: '',
   position: '',
   email: '',
   tel: '',
-  linkedin: '', 
+  linkedin: '',
   github: '',
   photo: '',
   palette: 1
-
 };
-
 //Traer elementos HTML
 const allInputs = document.querySelectorAll('.js_input');
 const namePreview = document.querySelector('.js_preview_title');
@@ -63,51 +58,109 @@ const telPreview = document.querySelector('.js-phone');
 const emailPreview = document.querySelector('.js-envelope');
 const linkedinPreview = document.querySelector('.js-linkedinIcon');
 const githubPreview = document.querySelector('.js-githubIcon');
-
-
-//Funciones
-
-function renderPreview () {
-
-  namePreview.innerHTML = userData.name;
-  positionPreview.innerHTML = userData.position;
-  telPreview.href = `tel:+34${userData.tel}`;
-  emailPreview.href = `mailto:${userData.email}`;
-  linkedinPreview.href = `https://www.linkedin.com/in/${userData.linkedin}`;
-  githubPreview.href = `https://www.github.com/${userData.github}`;
-
-  if (userData.name === '') {
-    namePreview.innerHTML = 'Nombre Apellido';
-  } else {
+//function
+function renderPreview(){
+  if(userData.name === ""){
+    namePreview.innerHTML = "Nombre Apellidos";
+  }else{
     namePreview.innerHTML = userData.name;
   }
-}
-
-//Handler
-function handleKeyUpWriteInputs(event) {
-  const inputValue = event.currentTarget.value;
-  renderPreview();
-  
-}
-
-//Listener
-allInputs.addEventListener('keyup', handleKeyUpWriteInputs); */
-
-
-//NOMBRE
-//Traer html
-const namePreview = document.querySelector('.js_preview_title');
-const nameInput = document.querySelector('.js_name');
-
-//handler
-function writeName () {
-  if (nameInput.value === ('')) {
-    namePreview.innerHTML = 'Nombre Apellido';
-
-  } else {
-  namePreview.innerHTML = nameInput.value;
+  if(userData.position === ""){
+    positionPreview.innerHTML = "Front-End Developer";
+  }else{
+    positionPreview.innerHTML = userData.position;
+  }
+  if(userData.tel === ""){
+    telPreview.innerHTML = "";
+  }else{
+    telPreview.innerHTML = `mailto:+34${userData.tel}`;
+  }
+  if(userData.email === ""){
+    emailPreview.innerHTML = "";
+  }else{
+    emailPreview.innerHTML = `mailto:${userData.email}`;
+  }
+  if(userData.linkedin === ""){
+    linkedinPreview.innerHTML = "";
+  }else{
+    linkedinPreview.innerHTML = `mailto:https://www.linkedin/in/${userData.name}`;
+  }if(userData.github === ""){
+    githubPreview.innerHTML = "";
+  }else{
+    githubPreview.innerHTML = `mailto:https://www.github/${userData.name}`;
   }
 }
+//Handler
+function handleWriteInputs(event) {
+  const userInput = event.currentTarget.id;
+  const userValue = event.currentTarget.value;
+  console.log(userInput);
+  if(userInput === 'name'){
+    userData.name = userValue;
+  }else if(userInput === 'position'){
+    userData.position = userValue;
+  }else if(userInput === 'telephone'){
+    userData.tel = userValue;
+  }else if(userInput === 'email'){
+    userData.email = userValue;
+  }else if(userInput === 'linkedin'){
+    userData.linkedin = userValue;
+  }else if(userInput === 'linkedin'){
+    userData.linkedin = userValue;
+  }else if(userInput === 'github'){
+    userData.github = userValue;
+  }
+renderPreview();
+}
+for(const eachInput of allInputs){
+  eachInput.addEventListener('keyup',handleWriteInputs);
+}
+console.log(userData);
 
-//listener
-nameInput.addEventListener('keyup', writeName);
+//componente foto perfil (código Iván)
+
+
+const fr = new FileReader();
+const fileField = document.querySelector('.js__profile-upload-btn');
+const profileImage = document.querySelector('.js__profile-image');
+const profilePreview = document.querySelector('.js__profile-preview');
+
+
+/**
+ * Recoge el archivo añadido al campo de tipo "file"
+ * y lo carga en nuestro objeto FileReader para que 
+ * lo convierta a algo con lo que podamos trabajar.
+ * Añade un listener al FR para que ejecute una función
+ * al tener los datos listos
+ * @param {evento} e 
+ */
+function getImage(e){
+  const myFile = e.currentTarget.files[0];
+  fr.addEventListener('load', writeImage);
+  fr.readAsDataURL(myFile);
+}
+
+
+/**
+ * Una vez tenemos los datos listos en el FR podemos
+ * trabajar con ellos ;)
+ */
+function writeImage() {
+  /* En la propiedad `result` de nuestro FR se almacena
+   * el resultado. Ese resultado de procesar el fichero que hemos cargado
+   * podemos pasarlo como background a la imagen de perfil y a la vista previa
+   * de nuestro componente.
+   */
+  profileImage.style.backgroundImage = `url(${fr.result})`;
+  profilePreview.style.backgroundImage = `url(${fr.result})`;
+  userData.photo = fr.result; 
+}
+
+
+
+/**
+ * Añadimos los listeners necesarios:
+ * - al botón visible para generar el click automático
+ * - al campo oculto para cuando cambie su value
+ */
+fileField.addEventListener('change', getImage);
