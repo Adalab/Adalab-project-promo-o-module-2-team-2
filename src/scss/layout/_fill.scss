@@ -1,7 +1,6 @@
 .fill {
   color: $colorText;
   font-family: $fontMain;
-  text-transform: uppercase;
   border: none;
   border-bottom: 1px #d8d8d8 solid;
   &__anunc {
@@ -26,6 +25,7 @@
     }
     &--h2 {
       font-size: 18px;
+      text-transform: uppercase;
     }
   }
   &__form {
@@ -43,6 +43,7 @@
   }
 }
 .div-container {
+  margin-top: 10px;
   display: flex;
 
   &__patata {
@@ -52,11 +53,16 @@
     font-family: sans-serif;
     color: #fff;
     background-color: #e17334;
-    padding: 6px 0 3px 0;
+    padding: 4px 0 3px 0;
+    border: 2px solid #e17334;
     border-radius: 3px;
     box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.32);
     display: inline-block;
     text-align: center;
+    &:hover {
+      background-color: white;
+      color: #e17334;
+    }
   }
   &__button {
     width: 0.1px;

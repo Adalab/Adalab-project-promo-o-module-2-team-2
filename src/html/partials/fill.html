@@ -18,15 +18,23 @@
             class="fill__form--input js_job js-input"
             placeholder="Ej. front-end unicorn" required />
 
-        <label for="" class="fill__form--required">Imagen de perfil</label>
 
-        <div class="div-container">
-            <label for="image" class="div-container__patata">Añadir
+        <!-- <li class="form__item--photo">
+            <label for="photo"
+                class="div-container__patata form__photobutton js__profile-trigger">Añadir
+                imagen</label>
+            <input type="file" id="photo" name="photo"
+                class="div-container__button js__profile-upload-btn">
+            <span class="form__photothumb js__profile-preview"></span>
+        </li> -->
+        <div class="div-container form__item--photo">
+            <label for="image"
+                class="div-container__patata js__profile-trigger">Añadir
                 imagen</label>
             <input type="file" id="image" name="image"
                 accept="image/png, image/jpeg" value="Añadir imagen"
-                class="div-container__button">
-            <input type="checkbox" class="div-container__check">
+                class="div-container__button js__profile-upload-btn">
+            <div class="div-container__check js__profile-preview"></div>
         </div>
         <label for="email" class="fill__form--required">Email</label>
 
