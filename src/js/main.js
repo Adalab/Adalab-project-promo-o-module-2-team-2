@@ -408,6 +408,29 @@ function writeImage() {
  */
 fileField.addEventListener('change', getImage);
 
+//<------------------- Servidor:  fetch según Ivan -------------------->
+//<----------------------------------****------------------------------>
+js - create - button;
+
+const createButton = document.querySelector('.js-create-button');
+
+function handleCreateCard(event) {
+  event.preventDefault();
+  fetch('https://awesome-profile-cards.herokuapp.com/card', {
+    method: 'POST',
+    body: JSON.stringify(Data),
+    headers: { 'Content-Type': 'application/json' },
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      console.log(Data.success);
+      //si Data.success es 'false'...
+      //si Data.success   es 'true'...
+    });
+}
+
+createButton.addEventListener('click', handleCreateCard);
+
 //<--------------------- Cambio de colores de la card --------------------->
 //<----------------------------------****---------------------------------->
 
