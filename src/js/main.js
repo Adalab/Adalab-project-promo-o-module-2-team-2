@@ -164,3 +164,20 @@ function writeImage() {
  * - al campo oculto para cuando cambie su value
  */
 fileField.addEventListener('change', getImage);
+
+
+//Traer btn de html
+const shareButtonElement = document.querySelector('.js_btn_share');
+
+
+//Función
+function handleClickShare(event) {
+  event preventDefault();
+
+  fetch('https://awesome-profile-cards.herokuapp.com/card')
+
+}
+
+
+//Listener crear tarjeta
+shareButtonElement.addEventListener('click', handleClickShare)
