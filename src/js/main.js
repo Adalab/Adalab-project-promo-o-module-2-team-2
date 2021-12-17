@@ -42,9 +42,9 @@ collapsableTitle3.addEventListener('click', handlerClickTitle);
 //Creación de objeto
 const userData = {
   name: '',
-  position: '',
+  job: '',
   email: '',
-  tel: '',
+  phone: '',
   linkedin: '',
   github: '',
   photo: '',
@@ -53,8 +53,8 @@ const userData = {
 //Traer elementos HTML
 const allInputs = document.querySelectorAll('.js_input');
 const namePreview = document.querySelector('.js_preview_title');
-const positionPreview = document.querySelector('.js_preview_subtitle');
-const telPreview = document.querySelector('.js-phone');
+const jobPreview = document.querySelector('.js_preview_subtitle');
+const phonePreview = document.querySelector('.js_phone');
 const emailPreview = document.querySelector('.js-envelope');
 const linkedinPreview = document.querySelector('.js-linkedinIcon');
 const githubPreview = document.querySelector('.js-githubIcon');
@@ -65,15 +65,15 @@ function renderPreview(){
   }else{
     namePreview.innerHTML = userData.name;
   }
-  if(userData.position === ""){
-    positionPreview.innerHTML = "Front-End Developer";
+  if(userData.job === ""){
+    jobPreview.innerHTML = "Front-End Developer";
   }else{
-    positionPreview.innerHTML = userData.position;
+    jobPreview.innerHTML = userData.job;
   }
-  if(userData.tel === ""){
-    telPreview.innerHTML = "";
+  if(userData.phone === ""){
+    phonePreview.innerHTML = "";
   }else{
-    telPreview.innerHTML = `mailto:+34${userData.tel}`;
+    phonePreview.innerHTML = `tel:+34${userData.phone}`;
   }
   if(userData.email === ""){
     emailPreview.innerHTML = "";
@@ -81,30 +81,28 @@ function renderPreview(){
     emailPreview.innerHTML = `mailto:${userData.email}`;
   }
   if(userData.linkedin === ""){
-    linkedinPreview.innerHTML = "";
+    linkedinPreview.href = "";
   }else{
-    linkedinPreview.innerHTML = `mailto:https://www.linkedin/in/${userData.name}`;
+    linkedinPreview.href = `https://www.linkedin/in/${userData.name}`;
   }if(userData.github === ""){
-    githubPreview.innerHTML = "";
+    githubPreview.href = "";
   }else{
-    githubPreview.innerHTML = `mailto:https://www.github/${userData.name}`;
+    githubPreview.href = `https://www.github/${userData.name}`;
   }
 }
 //Handler
 function handleWriteInputs(event) {
   const userInput = event.currentTarget.id;
   const userValue = event.currentTarget.value;
-  console.log(userInput);
+  console.log(userInput, userValue);
   if(userInput === 'name'){
     userData.name = userValue;
-  }else if(userInput === 'position'){
-    userData.position = userValue;
-  }else if(userInput === 'telephone'){
-    userData.tel = userValue;
+  }else if(userInput === 'job'){
+    userData.job = userValue;
+  }else if(userInput === 'phone'){
+    userData.phone = userValue;
   }else if(userInput === 'email'){
     userData.email = userValue;
-  }else if(userInput === 'linkedin'){
-    userData.linkedin = userValue;
   }else if(userInput === 'linkedin'){
     userData.linkedin = userValue;
   }else if(userInput === 'github'){
@@ -172,10 +170,18 @@ const shareButtonElement = document.querySelector('.js_btn_share');
 
 //Función
 function handleClickShare(event) {
-  event preventDefault();
+  event.preventDefault();
+  console.log(userData);
 
-  fetch('https://awesome-profile-cards.herokuapp.com/card')
-
+  fetch('https://awesome-profile-cards.herokuapp.com/card', {
+    method: 'POST',
+    body: JSON.stringify(userData),
+    headers: {'Content-Type' : 'application/json'}
+  })
+  .then((response) => response.json())
+  .then((userData) => {console.log(userData)})
+//innerHTML y href
+  
 }
 
 
