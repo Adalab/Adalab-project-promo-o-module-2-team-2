@@ -187,3 +187,62 @@ function handleClickShare(event) {
 
 //Listener crear tarjeta
 shareButtonElement.addEventListener('click', handleClickShare)
+
+
+
+//Gestión preview paletas
+const allRadioBtns = document.querySelectorAll('.checkbox');
+const cardIcons = document.querySelectorAll('.js_icon');
+const cardRectangle = document.querySelector('.js_rectangle');
+
+
+function handleClickPalette(event) {
+  const selectedRadio = event.currentTarget.id;
+  if (selectedRadio === 'palette1') {
+    paint1();
+  } else if (selectedRadio === 'palette2') {
+    paint2();
+  } else {
+    paint3();
+  }
+}
+
+function paint1() {
+  namePreview.classList.add('palette1');
+  namePreview.classList.remove('palette2');
+  namePreview.classList.remove('palette3');
+
+  cardRectangle.classList.add('palette1');
+  cardRectangle.classList.remove('palette2');
+  cardRectangle.classList.remove('palette3');
+
+  for (const iconColor of cardIcons) {
+    iconColor.classList.add('palette1');
+    iconColor.classList.remove('palette2');
+    iconColor.classList.remove('palette3'); 
+  }
+}
+
+function paint2() {
+  namePreview.classList.add('palette2');
+  namePreview.classList.remove('palette1');
+  namePreview.classList.remove('palette3');
+
+  cardRectangle.classList.add('palette2');
+  cardRectangle.classList.remove('palette1');
+  cardRectangle.classList.remove('palette3');
+}
+
+function paint3() {
+  namePreview.classList.add('palette3');
+  namePreview.classList.remove('palette1');
+  namePreview.classList.remove('palette2');
+
+  cardRectangle.classList.add('palette3');
+  cardRectangle.classList.remove('palette1');
+  cardRectangle.classList.remove('palette3');
+}
+
+for (const eachRadio of allRadioBtns) {
+  eachRadio.addEventListener('click', handleClickPalette);
+}

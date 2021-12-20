@@ -59,9 +59,17 @@
       & .rectangle {
         width: 5px;
         height: 42px;
-        background-color: #438792;
         grid-column: 1 / 2;
         grid-row: 1 / 3;
+        &.palette1 {
+          background-color: #438792;
+        }
+        &.palette2 {
+          background-color: #bd1010;
+        }
+        &.palette3 {
+          background-color: #eab052;
+        }
       }
       & .title {
         font-family: $fontCard;
@@ -69,9 +77,17 @@
         font-weight: bold;
         line-height: 1.11;
         text-transform: capitalize;
-        color: #114e4e;
         grid-column: 2 / 3;
         grid-row: 1 / 2;
+        &.palette1 {
+          color: #114e4e;
+        }
+        &.palette2 {
+          color: #420101;
+        }
+        &.palette3 {
+          color: #3e5b65;
+        }
       }
       & .subtitle {
         font-family: $fontCard;
@@ -100,16 +116,30 @@
       & .item {
         width: 32px;
         height: 32px;
-        border: 2px solid #a2deaf;
-        border-radius: 16px;
         margin-left: 5px;
         margin-right: 5px;
         text-align: center;
         line-height: 30px;
-        & .icon {
-          color: #114e4e;
-        }
+          & .palette1 {
+            color: #114e4e;
+            border: 2px solid #a2deaf;
+            border-radius: 50%;
+            padding: 5px;
+          }
+          & .palette2 {
+            color: #420101;
+            border: 2px solid #e95626;
+            border-radius: 50%;
+            padding: 5px;
+          }
+          & .palette3 {
+            color: #3e5b65;
+            border: 2px solid #a0c0cf;
+            border-radius: 50%;
+            padding: 5px;
+          }
       }
     }
   }
 }
+
