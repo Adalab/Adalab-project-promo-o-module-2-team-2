@@ -12,6 +12,9 @@
     align-items: center;
     width: 100%;
     margin-bottom: 10px;
+    &:hover {
+      color: #e17334;
+    }
 
     &--wrapper {
       display: flex;
