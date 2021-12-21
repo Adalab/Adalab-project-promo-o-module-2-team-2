@@ -69,6 +69,13 @@ function renderPreview() {
   } else {
     jobPreview.innerHTML = userData.job;
   }
+  if (userData.photo === '') {
+    profileImage.style.backgroundImage = 'url(./assets/images/user_image.png)';
+    profilePreview.style.backgroundImage = '';
+  } else {
+    profileImage.style.backgroundImage = `url(${userData.photo})`;
+    profilePreview.style.backgroundImage = `url(${userData.photo})`;
+  }
   if (userData.phone === '') {
     phonePreview.innerHTML = '';
   } else {
