@@ -1,92 +1,96 @@
-'use strict';
+"use strict";
 
 //Elemento HTML para design
-const collapsableTitle1 = document.querySelector('.js_collapsable_title_design');
+const collapsableTitle1 = document.querySelector(
+  ".js_collapsable_title_design"
+);
 //Elemento HTML para fill
-const collapsableTitle2 = document.querySelector('.js_collapsable_title_fill');
+const collapsableTitle2 = document.querySelector(".js_collapsable_title_fill");
 //Elemento HTML para share
-const collapsableTitle3 = document.querySelector('.js_collapsable_title_share');
+const collapsableTitle3 = document.querySelector(".js_collapsable_title_share");
 
 //Hadler para todos
 function handlerClickTitle(event) {
   //Para escribir menos, meto "event.currentTarget" en una constante
   const elementSelected = event.currentTarget;
   //Condicional para que se colapse el elemento que queda abierto (y su flecha gire)
-  if (!event.currentTarget.parentNode.classList.contains('collapsed')) {
-    elementSelected.parentNode.classList.toggle('collapsed');
-    elementSelected.querySelector('.js-arrow').classList.toggle('rotate');
+  if (!event.currentTarget.parentNode.classList.contains("collapsed")) {
+    elementSelected.parentNode.classList.toggle("collapsed");
+    elementSelected.querySelector(".js-arrow").classList.toggle("rotate");
     return;
   }
   //Elemento HTML comun para todos los title
-  const collapsableTitleList = document.querySelectorAll('.js_title_list');
+  const collapsableTitleList = document.querySelectorAll(".js_title_list");
 
   //Bucle para que los elementos de "collapsableTitleList" sean recorridos uno a uno y colapsados (e igual con la flecha).
   for (let i = 0; i < collapsableTitleList.length; i++) {
-    collapsableTitleList[i].parentNode.classList.add('collapsed');
-    collapsableTitleList[i].querySelector('.js-arrow').classList.remove('rotate');
+    collapsableTitleList[i].parentNode.classList.add("collapsed");
+    collapsableTitleList[i]
+      .querySelector(".js-arrow")
+      .classList.remove("rotate");
   }
-  
+
   //Colapsar y rotar flecha al clickar
-  elementSelected.parentNode.classList.toggle('collapsed');
-  elementSelected.querySelector('.js-arrow').classList.toggle('rotate');
-  
+  elementSelected.parentNode.classList.toggle("collapsed");
+  elementSelected.querySelector(".js-arrow").classList.toggle("rotate");
 }
 
 //Listener para design
-collapsableTitle1.addEventListener('click', handlerClickTitle);
+collapsableTitle1.addEventListener("click", handlerClickTitle);
 //Listener para fill
-collapsableTitle2.addEventListener('click', handlerClickTitle);
+collapsableTitle2.addEventListener("click", handlerClickTitle);
 //Listener para share
-collapsableTitle3.addEventListener('click', handlerClickTitle);
+collapsableTitle3.addEventListener("click", handlerClickTitle);
 
 //Creación de objeto
-const userData = {
-  name: '',
-  job: '',
-  email: '',
-  phone: '',
-  linkedin: '',
-  github: '',
-  photo: '',
-  palette: 1
+let userData = {
+  name: "",
+  job: "",
+  email: "",
+  phone: "",
+  linkedin: "",
+  github: "",
+  photo: "",
+  palette: 1,
 };
 //Traer elementos HTML
-const allInputs = document.querySelectorAll('.js_input');
-const namePreview = document.querySelector('.js_preview_title');
-const jobPreview = document.querySelector('.js_preview_subtitle');
-const phonePreview = document.querySelector('.js_phone');
-const emailPreview = document.querySelector('.js-envelope');
-const linkedinPreview = document.querySelector('.js-linkedinIcon');
-const githubPreview = document.querySelector('.js-githubIcon');
+const allInputs = document.querySelectorAll(".js_input");
+const namePreview = document.querySelector(".js_preview_title");
+const jobPreview = document.querySelector(".js_preview_subtitle");
+const phonePreview = document.querySelector(".js_phone");
+const emailPreview = document.querySelector(".js-envelope");
+const linkedinPreview = document.querySelector(".js-linkedinIcon");
+const githubPreview = document.querySelector(".js-githubIcon");
 //function
-function renderPreview(){
-  if(userData.name === ""){
+function renderPreview() {
+  if (userData.name === "") {
     namePreview.innerHTML = "Nombre Apellidos";
-  }else{
+  } else {
     namePreview.innerHTML = userData.name;
   }
-  if(userData.job === ""){
+  if (userData.job === "") {
     jobPreview.innerHTML = "Front-End Developer";
-  }else{
+  } else {
     jobPreview.innerHTML = userData.job;
   }
-  if(userData.phone === ""){
+  if (userData.phone === "") {
     phonePreview.innerHTML = "";
-  }else{
+  } else {
     phonePreview.innerHTML = `tel:+34${userData.phone}`;
   }
-  if(userData.email === ""){
-    emailPreview.innerHTML = "";
-  }else{
-    emailPreview.innerHTML = `mailto:${userData.email}`;
+  if (userData.email === "") {
+    emailPreview.href = "";
+  } else {
+    emailPreview.href = `mailto:${userData.email}`;
   }
-  if(userData.linkedin === ""){
+  if (userData.linkedin === "") {
     linkedinPreview.href = "";
-  }else{
+  } else {
     linkedinPreview.href = `https://www.linkedin/in/${userData.name}`;
-  }if(userData.github === ""){
+  }
+  if (userData.github === "") {
     githubPreview.href = "";
-  }else{
+  } else {
     githubPreview.href = `https://www.github/${userData.name}`;
   }
 }
@@ -95,49 +99,50 @@ function handleWriteInputs(event) {
   const userInput = event.currentTarget.id;
   const userValue = event.currentTarget.value;
   console.log(userInput, userValue);
-  if(userInput === 'name'){
+  if (userInput === "name") {
     userData.name = userValue;
-  }else if(userInput === 'job'){
+  } else if (userInput === "job") {
     userData.job = userValue;
-  }else if(userInput === 'phone'){
+  } else if (userInput === "phone") {
     userData.phone = userValue;
-  }else if(userInput === 'email'){
+  } else if (userInput === "email") {
     userData.email = userValue;
-  }else if(userInput === 'linkedin'){
+  } else if (userInput === "linkedin") {
     userData.linkedin = userValue;
-  }else if(userInput === 'github'){
+  } else if (userInput === "github") {
     userData.github = userValue;
   }
-renderPreview();
+  renderPreview();
+  //añadir objeto de inputs a localStorage
+  //pasar contenido del objeto a string
+  localStorage.setItem("userData", JSON.stringify(userData));
+  console.log(localStorage);
 }
-for(const eachInput of allInputs){
-  eachInput.addEventListener('keyup',handleWriteInputs);
+for (const eachInput of allInputs) {
+  eachInput.addEventListener("keyup", handleWriteInputs);
 }
 console.log(userData);
 
 //componente foto perfil (código Iván)
 
-
 const fr = new FileReader();
-const fileField = document.querySelector('.js__profile-upload-btn');
-const profileImage = document.querySelector('.js__profile-image');
-const profilePreview = document.querySelector('.js__profile-preview');
-
+const fileField = document.querySelector(".js__profile-upload-btn");
+const profileImage = document.querySelector(".js__profile-image");
+const profilePreview = document.querySelector(".js__profile-preview");
 
 /**
  * Recoge el archivo añadido al campo de tipo "file"
- * y lo carga en nuestro objeto FileReader para que 
+ * y lo carga en nuestro objeto FileReader para que
  * lo convierta a algo con lo que podamos trabajar.
  * Añade un listener al FR para que ejecute una función
  * al tener los datos listos
- * @param {evento} e 
+ * @param {evento} e
  */
-function getImage(e){
+function getImage(e) {
   const myFile = e.currentTarget.files[0];
-  fr.addEventListener('load', writeImage);
+  fr.addEventListener("load", writeImage);
   fr.readAsDataURL(myFile);
 }
-
 
 /**
  * Una vez tenemos los datos listos en el FR podemos
@@ -151,56 +156,49 @@ function writeImage() {
    */
   profileImage.style.backgroundImage = `url(${fr.result})`;
   profilePreview.style.backgroundImage = `url(${fr.result})`;
-  userData.photo = fr.result; 
+  userData.photo = fr.result;
 }
-
-
 
 /**
  * Añadimos los listeners necesarios:
  * - al botón visible para generar el click automático
  * - al campo oculto para cuando cambie su value
  */
-fileField.addEventListener('change', getImage);
-
+fileField.addEventListener("change", getImage);
 
 //Traer btn de html
-const shareButtonElement = document.querySelector('.js_btn_share');
-
+const shareButtonElement = document.querySelector(".js_btn_share");
 
 //Función
 function handleClickShare(event) {
   event.preventDefault();
   console.log(userData);
 
-  fetch('https://awesome-profile-cards.herokuapp.com/card', {
-    method: 'POST',
+  fetch("https://awesome-profile-cards.herokuapp.com/card", {
+    method: "POST",
     body: JSON.stringify(userData),
-    headers: {'Content-Type' : 'application/json'}
+    headers: { "Content-Type": "application/json" },
   })
-  .then((response) => response.json())
-  .then((userData) => {console.log(userData)})
-//innerHTML y href
-  
+    .then((response) => response.json())
+    .then((userData) => {
+      console.log(userData);
+    });
+  //innerHTML y href
 }
 
-
 //Listener crear tarjeta
-shareButtonElement.addEventListener('click', handleClickShare)
-
-
+shareButtonElement.addEventListener("click", handleClickShare);
 
 //Gestión preview paletas
-const allRadioBtns = document.querySelectorAll('.checkbox');
-const cardIcons = document.querySelectorAll('.js_icon');
-const cardRectangle = document.querySelector('.js_rectangle');
-
+const allRadioBtns = document.querySelectorAll(".checkbox");
+const cardIcons = document.querySelectorAll(".js_icon");
+const cardRectangle = document.querySelector(".js_rectangle");
 
 function handleClickPalette(event) {
   const selectedRadio = event.currentTarget.id;
-  if (selectedRadio === 'palette1') {
+  if (selectedRadio === "palette1") {
     paint1();
-  } else if (selectedRadio === 'palette2') {
+  } else if (selectedRadio === "palette2") {
     paint2();
   } else {
     paint3();
@@ -208,41 +206,96 @@ function handleClickPalette(event) {
 }
 
 function paint1() {
-  namePreview.classList.add('palette1');
-  namePreview.classList.remove('palette2');
-  namePreview.classList.remove('palette3');
+  namePreview.classList.add("palette1");
+  namePreview.classList.remove("palette2");
+  namePreview.classList.remove("palette3");
 
-  cardRectangle.classList.add('palette1');
-  cardRectangle.classList.remove('palette2');
-  cardRectangle.classList.remove('palette3');
+  cardRectangle.classList.add("palette1");
+  cardRectangle.classList.remove("palette2");
+  cardRectangle.classList.remove("palette3");
 
   for (const iconColor of cardIcons) {
-    iconColor.classList.add('palette1');
-    iconColor.classList.remove('palette2');
-    iconColor.classList.remove('palette3'); 
+    iconColor.classList.add("palette1");
+    iconColor.classList.remove("palette2");
+    iconColor.classList.remove("palette3");
   }
 }
 
 function paint2() {
-  namePreview.classList.add('palette2');
-  namePreview.classList.remove('palette1');
-  namePreview.classList.remove('palette3');
+  namePreview.classList.add("palette2");
+  namePreview.classList.remove("palette1");
+  namePreview.classList.remove("palette3");
 
-  cardRectangle.classList.add('palette2');
-  cardRectangle.classList.remove('palette1');
-  cardRectangle.classList.remove('palette3');
+  cardRectangle.classList.add("palette2");
+  cardRectangle.classList.remove("palette1");
+  cardRectangle.classList.remove("palette3");
+
+  for (const iconColor of cardIcons) {
+    iconColor.classList.remove("palette1");
+    iconColor.classList.add("palette2");
+    iconColor.classList.remove("palette3");
+  }
 }
 
 function paint3() {
-  namePreview.classList.add('palette3');
-  namePreview.classList.remove('palette1');
-  namePreview.classList.remove('palette2');
+  namePreview.classList.add("palette3");
+  namePreview.classList.remove("palette1");
+  namePreview.classList.remove("palette2");
 
-  cardRectangle.classList.add('palette3');
-  cardRectangle.classList.remove('palette1');
-  cardRectangle.classList.remove('palette3');
+  cardRectangle.classList.add("palette3");
+  cardRectangle.classList.remove("palette1");
+  cardRectangle.classList.remove("palette2");
+  for (const iconColor of cardIcons) {
+    iconColor.classList.remove("palette1");
+    iconColor.classList.remove("palette2");
+    iconColor.classList.add("palette3");
+  }
 }
 
 for (const eachRadio of allRadioBtns) {
-  eachRadio.addEventListener('click', handleClickPalette);
+  eachRadio.addEventListener("click", handleClickPalette);
 }
+
+function loadPreviousData() {
+  //recuperar valores objeto input de string a objeto tras haber hecho stringfy
+  const savedUserData = JSON.parse(localStorage.getItem("userData"));
+  if (savedUserData !== null) {
+    console.log(savedUserData);
+    userData = savedUserData;
+    renderPreview();
+    changeValueInputs ();
+  }
+}
+function changeValueInputs () {
+  for (const elements of allInputs) {
+    const userInput = elements.id;
+   
+  if (userInput === "name") {
+    elements.value = userData.name;
+  } else if (userInput === "job") {
+    elements.value = userData.job;
+  } else if (userInput === "phone") {
+    elements.value = userData.phone;
+  } else if (userInput === "email") {
+    elements.value = userData.email;
+  } else if (userInput === "linkedin") {
+    elements.value = userData.linkedin;
+  } else if (userInput === "github") {
+    elements.value = userData.github;
+  }
+}
+}
+loadPreviousData();
+
+//botón reset
+const resetBtn = document.querySelector('.js_reset');
+
+function handleResetBtn () {
+  localStorage.removeItem("userData");
+  console.log(userData);
+  namePreview.innerHTML="Nombre Apellido";
+  jobPreview.innerHTML = "Front-End Developer";
+}
+
+resetBtn.addEventListener('click', handleResetBtn);
+
