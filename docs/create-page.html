@@ -26,37 +26,37 @@
                 alt="Logo APC"></a>
     </header>
     <main>
-        <form class= "maincontainer" action="#" method="post">
+        <form class="maincontainer" action="#" method="post">
             <section class="blueSection">
-                <button class="blueSection__reset" type="reset" value="reset"><i
+                <button class="blueSection__reset js_reset" type="reset" value="reset"><i
                         class="blueSection__reset--icon far fa-trash-alt"></i>Reset
                 </button>
                 <article class="blueSection__article">
 
                     <div class="blueSection__article--group">
-                        <div class="rectangle"></div>
-                        <h2 class="title js_preview_title">Nombre Apellido</h2>
+                        <div class="rectangle js_rectangle palette1"></div>
+                        <h2 class="title js_preview_title palette1">Nombre Apellido</h2>
                         <h5 class="subtitle js_preview_subtitle">Front-End developer</h5>
                     </div>
 
                     <div class="blueSection__article--photo js__profile-image"></div>
 
                     <ul class="blueSection__article--containerList">
-                        <li class="item"><a href="#" class="js-phoneIcon" target="_blank"><i
-                                    class="icon fas fa-mobile-alt "></i></a>
+                        <li class="item"><a href="#" class="js-phoneIcon " target="_blank"><i
+                                    class="icon fas fa-mobile-alt  js_icon palette1"></i></a>
                         </li>
 
                         <li class="item"> <a href="
-                                mailto:email@email.com?Subject=Interesado%20en%20contactar%20contigo" class="js-envelope"
-                                target="_blank"><i class="icon far fa-envelope"></i></a>
+                                mailto:email@email.com?Subject=Interesado%20en%20contactar%20contigo" class="js-envelope "
+                                target="_blank"><i class="icon far fa-envelope js_icon palette1"></i></a>
                         </li>
 
                         <li class="item"> <a href="https://es.linkedin.com
-                            " class="js-linkedinIcon" target="_blank"><i class="icon fab fa-linkedin-in"></i></a>
+                            " class="js-linkedinIcon " target="_blank"><i class="icon fab fa-linkedin-in js_icon palette1"></i></a>
                         </li>
 
-                        <li class="item"> <a href="https://github.com/" class="js-githubIcon" target="_blank"><i
-                                    class="icon fab fa-github-alt"></i></a></li>
+                        <li class="item"> <a href="https://github.com/" class="js-githubIcon " target="_blank"><i
+                                    class="icon fab fa-github-alt js_icon palette1"></i></a></li>
                     </ul>
 
                 </article>
@@ -77,7 +77,7 @@
                         <ul>
                             <li class="design__colors--item">
                                 <input type="radio" id="palette1" name="palette"
-                                    value="palette1" class="checkbox">
+                                    value="palette1" class="checkbox" checked>
                                 <div class="palette palette__first--firstColor"></div>
                                 <div class="palette palette__first--secondColor"></div>
                                 <div class="palette palette__first--thirdColor"></div>
@@ -110,42 +110,47 @@
                     <section class="fill__form js_fill_content">
                         <label for="name" class="fill__form--required">Nombre completo</label>
 
-                        <input id="name" class="fill__form--input js_name js_input" type="text" placeholder="Ej. Sally Jill" name="name"
-                            required />
+                        <input id="name" class="fill__form--input js_name js_input" type="text"
+                            placeholder="Ej. Sally Jill" name="name" required />
 
-                        <label for="position" class="fill__form--required">Puesto</label>
+                        <label for="job" class="fill__form--required">Puesto</label>
 
-                        <input type="position" id="position" name="position" class="fill__form--input js_job js_input"
+                        <input type="text" id="job" name="job"
+                            class="fill__form--input js_job js_input"
                             placeholder="Ej. front-end unicorn" required />
 
                         <label for="" class="fill__form--required">Imagen de perfil</label>
 
                         <div class="div-container form__item--photo">
-                            <label for="image" class="div-container__patata js__profile-trigger">Añadir
+                            <label for="image"
+                                class="div-container__patata js__profile-trigger">Añadir
                                 imagen</label>
-                            <input type="file" id="image" name="image" accept="image/png, image/jpeg" value="Añadir imagen"
+                            <input type="file" id="image" name="image"
+                                accept="image/png, image/jpeg" value="Añadir imagen"
                                 class="div-container__button js__profile-upload-btn">
                             <div class="div-container__check js__profile-preview"></div>
                         </div>
                         <label for="email" class="fill__form--required">Email</label>
 
-                        <input type="email" class="fill__form--input js_email js_input" id="email" name="email"
-                            placeholder="Ej. sally.jill@gmail.com" required />
+                        <input type="email" class="fill__form--input js_email js_input"
+                            id="email" name="email" placeholder="Ej. sally.jill@gmail.com"
+                            required />
 
-                        <label for="telephone" class="fill__form--required">Teléfono</label>
+                        <label for="phone" class="fill__form--required">Teléfono</label>
 
-                        <input type="tel" class="fill__form--input js_phone js_input" id="telephone" placeholder=" Ej: 555-55-55-55"
-                            name="telephone" />
+                        <input type="tel" class="fill__form--input js_phone js_input" id="phone"
+                            placeholder=" Ej: 555-55-55-55" name="phone" />
 
                         <label for="linkedin" class="fill__form--required">LinkedIn</label>
 
-                        <input type="text" class="fill__form--input js_linkedin" id="linkedin"
-                            placeholder=" Ej: linkedin.com/in/sally.hill" name="linkedin" />
+                        <input type="text" class="fill__form--input js_linkedin js_input"
+                            id="linkedin" placeholder=" Ej: linkedin.com/in/sally.hill"
+                            name="linkedin" />
 
                         <label for="github" class="fill__form--required">Github</label>
 
-                        <input type="text" class="fill__form--input js_github js_input" id="github" placeholder=" Ej: @sally-hill"
-                            name="github" />
+                        <input type="text" class="fill__form--input js_github js_input"
+                            id="github" placeholder=" Ej: @sally-hill" name="github" />
                     </section>
                 </fieldset>
                 <fieldset class="share collapsed">
@@ -157,25 +162,29 @@
                         <a><i class="fas fa-chevron-down js-arrow"></i></a>
                     </legend>
                     <div class="share__button js_share_content">
-                        <button class="share__button--item">
+                        <button class="share__button--item js_btn_share">
                             <i class="far fa-address-card share__button--icon"></i>
                             <span>Crear tarjeta</span>
                         </button>
                     </div>
                     <!-- AFTER -->
-                    <div class="share__paragraph">
+                    <div class="share__paragraph js_share_twitter">
                         <h3>La tarjeta ha sido creada:</h3>
-                        <a href="#">
-                            <p class="share__paragraph--text">
-                                https://awesome-profile-card.com?id=A456DF00
-                            </p>
+                        <a href="#" class="share__paragraph--text">
+
                         </a>
-                        <a href="#">
-                            <button class="share__paragraph--twButton">
-                                <i class="fab fa-twitter share__paragraph--icon"></i>
-                                <span>Compartir en twitter</span>
-                            </button>
-                        </a>
+                        <div class="share__paragraph--twButton">
+                            <a href="https://twitter.com/intent/tweet?text=Os%20comparto%20mi%20tarjeta%20de%20presentaci%C3%B3n%20hecha%20a%20trav%C3%A9s%20de%20la%20app%20web%20%22Awesome%20Profile%20Cards%22%20%20%23HTML%20%23CSS%20%23JS%20%20%23Adalab%20%23WomenInTech"
+                                target="_blank" class="share__paragraph--twLink">
+                                <span>Compartir en Twitter</span><i
+                                    class="fab fa-twitter share__paragraph--icon"></i>
+
+                            </a>
+                        </div>
+
+
+
+
                     </div>
                 </fieldset>
             </section>
