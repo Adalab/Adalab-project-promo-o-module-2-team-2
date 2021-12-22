@@ -78,17 +78,23 @@
     }
 
     &--twButton {
-      display: flex;
-      justify-content: center;
-      align-items: center;
       width: 181px;
       height: 30px;
       background-color: #00a0f5;
-      color: white;
       border: none;
       border-radius: 3px;
       box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.32);
       font-size: 14px;
+    }
+
+    &--twLink {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      padding: 4px 0 7px;
+
     }
 
     &--icon {
