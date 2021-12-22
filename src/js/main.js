@@ -59,6 +59,11 @@ const linkedinPreview = document.querySelector('.js-linkedinIcon');
 const githubPreview = document.querySelector('.js-githubIcon');
 //function
 function renderPreview() {
+  if (userData.palette === '') {
+    userData.palette = 1;
+  } else {
+    userData.palette = userData.palette;
+  }
   if (userData.name === '') {
     namePreview.innerHTML = 'Nombre Apellidos';
   } else {
@@ -208,6 +213,7 @@ function handleClickPalette(event) {
 }
 
 function paint1() {
+  userData.palette = 1;
   namePreview.classList.add('palette1');
   namePreview.classList.remove('palette2');
   namePreview.classList.remove('palette3');
@@ -224,6 +230,7 @@ function paint1() {
 }
 
 function paint2() {
+  userData.palette = 2;
   namePreview.classList.add('palette2');
   namePreview.classList.remove('palette1');
   namePreview.classList.remove('palette3');
@@ -240,6 +247,7 @@ function paint2() {
 }
 
 function paint3() {
+  userData.palette = 3;
   namePreview.classList.add('palette3');
   namePreview.classList.remove('palette1');
   namePreview.classList.remove('palette2');
@@ -305,3 +313,6 @@ function handleResetBtn() {
 }
 
 resetBtn.addEventListener('click', handleResetBtn);
+
+
+https://twitter.com/intent/tweet?hashtags=demo&original_referer=https%3A%2F%2Fdeveloper.twitter.com%2F&ref_src=twsrc%5Etfw%7Ctwcamp%5Ebuttonembed%7Ctwterm%5Eshare%7Ctwgr%5E&related=twitterapi%2Ctwitter&text=Hello%20world&url=https%3A%2F%2Fexample.com%2Ffoo&via=twitterdev
