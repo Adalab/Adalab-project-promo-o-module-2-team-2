@@ -94,12 +94,12 @@ function renderPreview() {
   if (userData.linkedin === '') {
     linkedinPreview.href = '';
   } else {
-    linkedinPreview.href = `https://www.linkedin/in/${userData.linkedin}`;
+    linkedinPreview.href = `https://www.linkedin.com/in/${userData.linkedin}/`;
   }
   if (userData.github === '') {
     githubPreview.href = '';
   } else {
-    githubPreview.href = `https://www.github/${userData.github}`;
+    githubPreview.href = `https://github.com/${userData.github}`;
   }
 }
 //Handler
