@@ -59,6 +59,7 @@ const linkedinPreview = document.querySelector('.js-linkedinIcon');
 const githubPreview = document.querySelector('.js-githubIcon');
 //function
 function renderPreview() {
+  let filled = true;
   if (userData.palette === '') {
     userData.palette = 1;
   } else {
@@ -78,16 +79,19 @@ function renderPreview() {
     }
   }
   if (userData.name === '') {
+    filled = false;
     namePreview.innerHTML = 'Nombre Apellidos';
   } else {
     namePreview.innerHTML = userData.name;
   }
   if (userData.job === '') {
+    filled = false;
     jobPreview.innerHTML = 'Front-End Developer';
   } else {
     jobPreview.innerHTML = userData.job;
   }
   if (userData.photo === '') {
+    filled = false;
     profileImage.style.backgroundImage = 'url(./assets/images/user_image.png)';
     profilePreview.style.backgroundImage = '';
   } else {
@@ -95,24 +99,33 @@ function renderPreview() {
     profilePreview.style.backgroundImage = `url(${userData.photo})`;
   }
   if (userData.phone === '') {
+    filled = false;
     phonePreview.href = '';
   } else {
     phonePreview.href = `tel:+34${userData.phone}`;
   }
   if (userData.email === '') {
+    filled = false;
     emailPreview.href = '';
   } else {
     emailPreview.href = `mailto:${userData.email}`;
   }
   if (userData.linkedin === '') {
+    filled = false;
     linkedinPreview.href = '';
   } else {
     linkedinPreview.href = `https://www.linkedin.com/in/${userData.linkedin}/`;
   }
   if (userData.github === '') {
+    filled = false;
     githubPreview.href = '';
   } else {
     githubPreview.href = `https://github.com/${userData.github}`;
+  }
+  if (filled) {
+    //Añadir la clase de activo
+    shareButtonElement.classList.remove('gray');
+    shareButtonElement.classList.add('orange');
   }
 }
 //Handler

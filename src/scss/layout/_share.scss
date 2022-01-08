@@ -45,8 +45,6 @@
       width: 199px;
       height: 50px;
       color: white;
-      background-color: $colorMain;
-      // background-color: #d5d5d5;
       border: none;
       border-radius: 12px;
       box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.32);
@@ -94,7 +92,6 @@
       align-items: center;
       color: white;
       padding: 4px 0 7px;
-
     }
 
     &--icon {
@@ -102,4 +99,13 @@
       font-size: 18px;
     }
   }
+}
+.hidden {
+  display: none;
+}
+.gray {
+  background-color: gray;
+}
+.orange {
+  background-color: $colorMain;
 }
