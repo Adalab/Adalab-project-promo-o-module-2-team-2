@@ -57,6 +57,8 @@ const phonePreview = document.querySelector('.js-phoneIcon');
 const emailPreview = document.querySelector('.js-envelope');
 const linkedinPreview = document.querySelector('.js-linkedinIcon');
 const githubPreview = document.querySelector('.js-githubIcon');
+const shareOnTwitter = document.querySelector('.js_share_twitter');
+const errorMessage = document.querySelector('.js_error_message')
 //function
 function renderPreview() {
   let filled = true;
@@ -126,6 +128,19 @@ function renderPreview() {
     //Añadir la clase de activo
     shareButtonElement.classList.remove('gray');
     shareButtonElement.classList.add('orange');
+    //Mostrar 'compartir en twitter'
+    shareOnTwitter.classList.remove('hidden');
+    //Ocultar mensaje de error
+    errorMessage.classList.add('hidden');
+  } else if (filled === false) {
+    //Eliminar clase de activo
+    shareButtonElement.classList.remove('orange');
+    shareButtonElement.classList.add('gray');
+    //Ocultar 'compartir en twitter'
+    shareOnTwitter.classList.add('hidden');
+    //Mostrar mensaje de error
+    errorMessage.classList.remove('hidden');
+    errorMessage.innerHTML = `Es necesario rellenar todos los campos`;
   }
 }
 //Handler
