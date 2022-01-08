@@ -63,6 +63,19 @@ function renderPreview() {
     userData.palette = 1;
   } else {
     userData.palette = userData.palette;
+    if (userData.palette === 1) {
+      Array.from(allRadioBtns)
+        .find((radio) => radio.value === 'palette1')
+        .click();
+    } else if (userData.palette === 2) {
+      Array.from(allRadioBtns)
+        .find((radio) => radio.value === 'palette2')
+        .click();
+    } else if (userData.palette === 3) {
+      Array.from(allRadioBtns)
+        .find((radio) => radio.value === 'palette3')
+        .click();
+    }
   }
   if (userData.name === '') {
     namePreview.innerHTML = 'Nombre Apellidos';
@@ -82,9 +95,9 @@ function renderPreview() {
     profilePreview.style.backgroundImage = `url(${userData.photo})`;
   }
   if (userData.phone === '') {
-    phonePreview.innerHTML = '';
+    phonePreview.href = '';
   } else {
-    phonePreview.innerHTML = `tel:+34${userData.phone}`;
+    phonePreview.href = `tel:+34${userData.phone}`;
   }
   if (userData.email === '') {
     emailPreview.href = '';
@@ -214,6 +227,7 @@ function handleClickPalette(event) {
 
 function paint1() {
   userData.palette = 1;
+  localStorage.setItem('userData', JSON.stringify(userData));
   namePreview.classList.add('palette1');
   namePreview.classList.remove('palette2');
   namePreview.classList.remove('palette3');
@@ -231,6 +245,7 @@ function paint1() {
 
 function paint2() {
   userData.palette = 2;
+  localStorage.setItem('userData', JSON.stringify(userData));
   namePreview.classList.add('palette2');
   namePreview.classList.remove('palette1');
   namePreview.classList.remove('palette3');
@@ -248,6 +263,7 @@ function paint2() {
 
 function paint3() {
   userData.palette = 3;
+  localStorage.setItem('userData', JSON.stringify(userData));
   namePreview.classList.add('palette3');
   namePreview.classList.remove('palette1');
   namePreview.classList.remove('palette2');
