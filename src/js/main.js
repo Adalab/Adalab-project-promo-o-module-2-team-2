@@ -53,7 +53,7 @@ let userData = {
 const allInputs = document.querySelectorAll('.js_input');
 const namePreview = document.querySelector('.js_preview_title');
 const jobPreview = document.querySelector('.js_preview_subtitle');
-const phonePreview = document.querySelector('.js_phone');
+const phonePreview = document.querySelector('.js-phoneIcon');
 const emailPreview = document.querySelector('.js-envelope');
 const linkedinPreview = document.querySelector('.js-linkedinIcon');
 const githubPreview = document.querySelector('.js-githubIcon');
@@ -82,9 +82,9 @@ function renderPreview() {
     profilePreview.style.backgroundImage = `url(${userData.photo})`;
   }
   if (userData.phone === '') {
-    phonePreview.innerHTML = '';
+    phonePreview.href = '';
   } else {
-    phonePreview.innerHTML = `tel:+34${userData.phone}`;
+    phonePreview.href = `tel:+34${userData.phone}`;
   }
   if (userData.email === '') {
     emailPreview.href = '';
