@@ -345,6 +345,7 @@ function changeValueInputs() {
   }
 }
 loadPreviousData();
+
 //Función reset object
 function resetObject() {
   for (const item of Object.keys(userData)) {
@@ -353,13 +354,22 @@ function resetObject() {
   userData.palette = 1;
 }
 
+//Función reset local storage
+function resetLocalStorage() {
+  for (const item of Object.keys(userData)) {
+    if (userData[item] === '') {
+      localStorage.removeItem('userData');
+    }
+  }
+}
+
 //botón reset
 const resetBtn = document.querySelector('.js_reset');
 
 function handleResetBtn() {
-  localStorage.removeItem('userData');
   resetObject();
   renderPreview();
+  resetLocalStorage();
 }
 
 resetBtn.addEventListener('click', handleResetBtn);
