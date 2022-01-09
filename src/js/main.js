@@ -147,7 +147,6 @@ function renderPreview() {
 function handleWriteInputs(event) {
   const userInput = event.currentTarget.id;
   const userValue = event.currentTarget.value;
-  console.log(userInput, userValue);
   if (userInput === 'name') {
     userData.name = userValue;
   } else if (userInput === 'job') {
@@ -220,7 +219,6 @@ const shareButtonElement = document.querySelector('.js_btn_share');
 //Función
 function handleClickShare(event) {
   event.preventDefault();
-  console.log(userData);
   //Mostrar 'compartir en twitter'
   shareOnTwitter.classList.remove('hidden');
 
@@ -231,12 +229,11 @@ function handleClickShare(event) {
   })
     .then((response) => response.json())
     .then((userData) => {
-      console.log(userData);
       //innerHTML y href
       const linkCard = document.querySelector('.js-url');
       const twBtn = document.querySelector('.js_tw_button');
       linkCard.href = userData.cardURL;
-      twBtn.href = `https://twitter.com/intent/tweet?text=Os%20comparto%20mi%20tarjeta%20de%20presentaci%C3%B3n%20hecha%20a%20trav%C3%A9s%20de%20la%20app%20web%20%22Truthy%20and%20The%20Booleans%22%20%20&url=${userData.cardURL}%20%23HTML%20%23CSS%20%23JS%20%23Adalab%20%23WomenInTech`
+      twBtn.href = `https://twitter.com/intent/tweet?text=Os%20comparto%20mi%20tarjeta%20de%20presentaci%C3%B3n%20hecha%20a%20trav%C3%A9s%20de%20la%20app%20web%20%22Truthy%20and%20The%20Booleans%22%20%20&url=${userData.cardURL}%20%23HTML%20%23CSS%20%23JS%20%23Adalab%20%23WomenInTech`;
     });
 }
 
